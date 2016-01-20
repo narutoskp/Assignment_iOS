@@ -10,19 +10,19 @@ import UIKit
 
 class LocationViewController: UIViewController , UITextFieldDelegate{
 
-    @IBOutlet weak var textwelcome: UILabel!
     @IBOutlet weak var txtfiedLatitude: UITextField!
     @IBOutlet weak var txtfiedLongitude: UITextField!
-    @IBOutlet weak var btnClick: UIButton!
     
-
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
 
     }
-        
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
 
@@ -33,6 +33,8 @@ class LocationViewController: UIViewController , UITextFieldDelegate{
         super.didReceiveMemoryWarning()
 
     }
-    
+
+    @IBAction func resetOk(sender: AnyObject) {
+    }
 }
 

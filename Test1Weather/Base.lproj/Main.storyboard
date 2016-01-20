@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Weather-->
@@ -64,18 +65,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yA2-WU-r0X">
-                                <rect key="frame" x="83" y="176" width="63" height="21"/>
+                                <rect key="frame" x="83" y="173" width="63" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.8125" green="0.032629272818982334" blue="0.023664325267154937" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="z8R-ij-e0h">
-                                <rect key="frame" x="184" y="175" width="147" height="22"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="24" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="z8R-ij-e0h">
+                                <rect key="frame" x="184" y="172" width="147" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frc-fF-iIx">
-                                <rect key="frame" x="155" y="297" width="104" height="41"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="24" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="X7s-Gl-3z8">
+                                <rect key="frame" x="186" y="224" width="145" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frc-fF-iIx">
+                                <rect key="frame" x="69" y="310" width="276" height="33"/>
                                 <color key="backgroundColor" red="0.44986621386771841" green="0.80596751304121184" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="OK"/>
@@ -86,13 +92,8 @@
                                     <segue destination="702-df-Fbe" kind="unwind" identifier="saveTitle" unwindAction="saveTitle:" id="pM9-kD-Jeo"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="X7s-Gl-3z8">
-                                <rect key="frame" x="186" y="224" width="145" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GO-ou-TCr">
-                                <rect key="frame" x="20" y="377" width="374" height="22"/>
+                                <rect key="frame" x="20" y="107" width="374" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.31847919788872414" green="0.48847069274706501" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -101,29 +102,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yA2-WU-r0X" firstAttribute="top" secondItem="TzR-lA-jFa" secondAttribute="bottom" constant="112" id="3bg-XC-9MK"/>
-                            <constraint firstItem="1GO-ou-TCr" firstAttribute="trailing" secondItem="WmK-t6-y2V" secondAttribute="trailingMargin" id="6M8-ih-1EV"/>
+                            <constraint firstItem="yA2-WU-r0X" firstAttribute="top" secondItem="TzR-lA-jFa" secondAttribute="bottom" constant="109" id="3bg-XC-9MK"/>
                             <constraint firstItem="z8R-ij-e0h" firstAttribute="top" secondItem="TzR-lA-jFa" secondAttribute="bottom" constant="108" id="6a7-ZX-Z86"/>
                             <constraint firstAttribute="trailingMargin" secondItem="z8R-ij-e0h" secondAttribute="trailing" constant="63" id="8U3-pS-6nR"/>
-                            <constraint firstItem="1GO-ou-TCr" firstAttribute="leading" secondItem="WmK-t6-y2V" secondAttribute="leadingMargin" id="CV3-qO-eg6"/>
-                            <constraint firstItem="1GO-ou-TCr" firstAttribute="top" secondItem="Frc-fF-iIx" secondAttribute="bottom" constant="45" id="E1B-Gi-JH7"/>
-                            <constraint firstItem="YQb-99-Ynk" firstAttribute="top" secondItem="yA2-WU-r0X" secondAttribute="bottom" constant="38" id="Fx0-Et-UWD"/>
-                            <constraint firstItem="Frc-fF-iIx" firstAttribute="leading" secondItem="WmK-t6-y2V" secondAttribute="leadingMargin" constant="135" id="SKY-g9-hP3"/>
-                            <constraint firstItem="s3x-RT-mff" firstAttribute="top" secondItem="YQb-99-Ynk" secondAttribute="bottom" constant="480" id="SW3-Xa-2is"/>
+                            <constraint firstItem="Frc-fF-iIx" firstAttribute="top" secondItem="YQb-99-Ynk" secondAttribute="bottom" constant="54" id="9gv-TA-BCK"/>
+                            <constraint firstItem="Frc-fF-iIx" firstAttribute="centerX" secondItem="WmK-t6-y2V" secondAttribute="centerX" id="E5u-fL-g8q"/>
+                            <constraint firstItem="YQb-99-Ynk" firstAttribute="top" secondItem="yA2-WU-r0X" secondAttribute="bottom" constant="41" id="Fx0-Et-UWD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1GO-ou-TCr" secondAttribute="trailing" id="HvB-Hj-y6B"/>
+                            <constraint firstItem="Frc-fF-iIx" firstAttribute="leading" secondItem="WmK-t6-y2V" secondAttribute="leadingMargin" multiplier="1:1.5" constant="55.666666666666671" id="SKY-g9-hP3"/>
                             <constraint firstItem="YQb-99-Ynk" firstAttribute="leading" secondItem="WmK-t6-y2V" secondAttribute="leadingMargin" constant="63" id="Tdu-nd-Qjx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Frc-fF-iIx" secondAttribute="trailing" constant="135" id="b1J-mn-S5z"/>
+                            <constraint firstItem="Frc-fF-iIx" firstAttribute="top" secondItem="1GO-ou-TCr" secondAttribute="bottom" constant="181" id="Yo0-JN-P0V"/>
+                            <constraint firstItem="1GO-ou-TCr" firstAttribute="top" secondItem="TzR-lA-jFa" secondAttribute="bottom" constant="43" id="a9K-NO-mYf"/>
                             <constraint firstItem="X7s-Gl-3z8" firstAttribute="top" secondItem="z8R-ij-e0h" secondAttribute="bottom" constant="30" id="drI-P4-svR"/>
-                            <constraint firstItem="Frc-fF-iIx" firstAttribute="top" secondItem="X7s-Gl-3z8" secondAttribute="bottom" constant="53" id="g0A-Rc-h9J"/>
+                            <constraint firstItem="Frc-fF-iIx" firstAttribute="top" secondItem="X7s-Gl-3z8" secondAttribute="bottom" constant="64" id="g0A-Rc-h9J"/>
                             <constraint firstItem="X7s-Gl-3z8" firstAttribute="leading" secondItem="YQb-99-Ynk" secondAttribute="trailing" constant="26" id="nBN-JF-QMq"/>
                             <constraint firstItem="yA2-WU-r0X" firstAttribute="leading" secondItem="WmK-t6-y2V" secondAttribute="leadingMargin" constant="63" id="tzY-e6-JiG"/>
                             <constraint firstItem="z8R-ij-e0h" firstAttribute="leading" secondItem="yA2-WU-r0X" secondAttribute="trailing" constant="38" id="uDF-dG-7Q4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="X7s-Gl-3z8" secondAttribute="trailing" constant="63" id="umC-pa-4ZB"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="1GO-ou-TCr" secondAttribute="leading" id="wP5-ZQ-0Z9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Weather" id="V1D-TF-wig"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="textwelcome" destination="1GO-ou-TCr" id="wBa-CK-nTq"/>
                         <outlet property="txtfiedLatitude" destination="z8R-ij-e0h" id="N9p-KM-ryn"/>
                         <outlet property="txtfiedLongitude" destination="X7s-Gl-3z8" id="HEs-Ro-gS9"/>
                     </connections>

@@ -11,10 +11,10 @@ import UIKit
 class MyTableViewController: UITableViewController {
     
     var arrNameCity = [String]()
-    var arrid = [String]()
-    var selecttitle = String()
-    var idwoeid:String = ""
-    var idcity:String = ""
+    var arrId = [String]()
+    var selectTitle = String()
+    var idWoeid:String = ""
+    var idCity:String = ""
     var textLat = String()
     var textLong = String()
 
@@ -39,13 +39,13 @@ class MyTableViewController: UITableViewController {
             
             let parser = XMLParser1(url1:"https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20geo.placefinder%20where%20text=%22\(textLat),\(textLong)%22%20and%20gflags=%22R%22")
             
-            let weather: Weather1 = parser.weather1
+            let weather: WeatherLocal = parser.weatherLocal
             
-            idwoeid = weather.woeid
-            idcity = weather.city
+            idWoeid = weather.woeid
+            idCity = weather.city
 
-            arrNameCity.append(idcity)
-            arrid.append(idwoeid)
+            arrNameCity.append(idCity)
+            arrId.append(idWoeid)
             
             
         }
@@ -84,14 +84,14 @@ class MyTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("You selected cell #\(indexPath.row)!")
-        selecttitle = arrNameCity[indexPath.row]
+        selectTitle = arrNameCity[indexPath.row]
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if let selectedRow = self.tableView.indexPathsForSelectedRows {
             let showViewController = segue.destinationViewController as! ShowViewController
             let indexPath = selectedRow[0]
-            showViewController.idwoeid = arrid[indexPath.row]
+            showViewController.idWoeid = arrId[indexPath.row]
         
         }
 

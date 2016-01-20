@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Weather1 {
+class WeatherLocal {
     
     var city = String()
     var woeid = String()

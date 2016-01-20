@@ -13,13 +13,13 @@ class ShowViewController: UIViewController {
 
     @IBOutlet weak var txtShowWeather: UITextView!
     
-    var idwoeid = String()
+    var idWoeid = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        let parser = XMLParser(url: "https://weather.yahooapis.com/forecastrss?w=\(idwoeid)&u=c")
+        let parser = XMLParser(url: "https://weather.yahooapis.com/forecastrss?w=\(idWoeid)&u=c")
         let weather: Weather = parser.weather
         var string = String()
         
@@ -34,31 +34,13 @@ class ShowViewController: UIViewController {
             
             string += "\(day) - \(descriptionOfConditions). High: \(highTemp) Low: \(lowTemp)\n"
             
-            print(string)
-            
         }
         
-        
         txtShowWeather.text = string
-
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
